@@ -149,20 +149,22 @@
             document.getElementById('year').innerHTML = currentYear;
         </script> -->
 
-        <footer class="bg-dark py-3">
-            <div class="container">
-                <div class="row justify-content-between align-items-center">
-                    <img src="logo%20blue%20bg.PNG?raw=true" class="logo img-fluid" alt="logo-blue-bg" style="max-width: 15%">
-                    <small class="text-light">Copyright &copy; <span id="year"></span> AI and Robotics Institute, NEU</small>
+<div class="container-border" style="text-align:center">
+            <footer class="bg-dark py-3">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <img src="logo%20blue%20bg.PNG?raw=true" class="logo img-fluid" alt="logo-blue-bg" style="max-width: 15%">
+                        <small class="text-light">Copyright &copy; <span id="year"></span> AI and Robotics Institute, NEU</small>
+                    </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+</div>
+        
         <script>
             // Set the current year in the copyright notice
-            const currentYear = new Date().getFullYear();
-            document.getElementById('year').innerHTML = currentYear;
-        </script>
-    <script>
+            const currentYeard = new Date().getFullYear();
+            document.getElementById('year').innerHTML = currentYeard;
+ 
 	function generateString() {
 		// Get form values
 		var nationality = document.getElementById("nationality").value;
