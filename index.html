@@ -388,7 +388,7 @@
 		var randomNumber = Math.floor(Math.random() * 10000).toString().padStart(4, "0");
 
 		// Concatenate values to create string
-		var studentNumber = nationality + level  + dob.substring(2, 4) + "0000" + randomNumber;
+		var studentNumber = nationality + level  + dob.substring(1, 4) + "000" + randomNumber;
 
 		// Display string in div
 		document.getElementById("studentNumber").innerHTML = studentNumber;
