@@ -139,13 +139,15 @@
 		var currentYear = new Date().getFullYear().toString().slice(-3);
 		// Generate 4-digit random number
 		
+        let dob = document.getElementById('dob').value;
+
 		var department = document.getElementById("department").value;
 		// Generate 4-digit random number
 		
 		var randomNumber = Math.floor(Math.random() * 10000).toString().padStart(4, "0");
 
 		// Concatenate values to create string
-		var studentNumber = nationality + level + department + currentYear + "0000" + randomNumber;
+		var studentNumber = nationality + level  + dob.substring(2, 4) + "0000" + randomNumber;
 
 		// Display string in div
 		document.getElementById("studentNumber").innerHTML = studentNumber;
