@@ -90,7 +90,7 @@
                 <input type="email" class="form-control" id="email" placeholder="Enter email" required>
             </div>
             <div class="form-group">
-                <label for="dob">Date of Birth</label>
+                <label for="dob">Registration Year</label>
                 <input type="date" class="form-control" id="dob">
             </div>
 
@@ -104,7 +104,7 @@
                 </select>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="department">Department</label>
                 <select class="form-control" id="department">
                     <option value="EN">Engineering</option>
@@ -114,7 +114,7 @@
                     <option value="ES">Economic Sciences</option>
                     <option value="BA">Business Administration</option>
                 </select>
-            </div>
+            </div> -->
             <div class="form-group">
                 <label for="level">Level of Study</label>
                 <select class="form-control" id="level">
@@ -130,7 +130,7 @@
 
     </div>
 
-        <footer>
+        <!-- <footer>
             <div class="container-fluid bg-dark text-light py-3">
                 <div class="row">
         
@@ -147,8 +147,21 @@
             // Set the current year in the copyright notice
             const currentYear = new Date().getFullYear();
             document.getElementById('year').innerHTML = currentYear;
-        </script>
+        </script> -->
 
+        <footer class="bg-dark py-3">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <img src="logo%20blue%20bg.PNG?raw=true" class="logo img-fluid" alt="logo-blue-bg" style="max-width: 15%">
+                    <small class="text-light">Copyright &copy; <span id="year"></span> AI and Robotics Institute, NEU</small>
+                </div>
+            </div>
+        </footer>
+        <script>
+            // Set the current year in the copyright notice
+            const currentYear = new Date().getFullYear();
+            document.getElementById('year').innerHTML = currentYear;
+        </script>
     <script>
 	function generateString() {
 		// Get form values
@@ -172,6 +185,7 @@
 		document.getElementById("studentNumber").innerHTML = studentNumber;
 	}
     </script>
+    <!-- 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 -->
 </body>
 
 </html>
