@@ -130,6 +130,25 @@
 
     </div>
 
+        <footer>
+            <div class="container-fluid bg-dark text-light py-3">
+                <div class="row">
+        
+                    <img src="logo%20blue%20bg.PNG?raw=true" class="logo" alt="logo-blue-bg"
+                        style="width: 15%;display:block; height: auto;margin: auto;" border="0">
+                    <small>Copyright &copy; <span id="year"></span> AI and Robotics Institute, NEU</small>
+        
+        
+                </div>
+            </div>
+        </footer>
+        
+        <script>
+            // Set the current year in the copyright notice
+            const currentYear = new Date().getFullYear();
+            document.getElementById('year').innerHTML = currentYear;
+        </script>
+
     <script>
 	function generateString() {
 		// Get form values
