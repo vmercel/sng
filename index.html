@@ -1,0 +1,156 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous">
+    <style>
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .result-pad {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"] {
+            width: 100%;
+            height: 40px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 0 10px;
+        }
+
+        button[type="button"] {
+            width: 100%;
+            height: 40px;
+            background-color: #00b8d4;
+            color: #fff;
+            border: 0;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0095c8;
+        }
+
+        #studentNumberE {
+            text-align: center;
+            font-size: 30;
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-form">
+        <div style="text-align:center">
+            <h1>Student Number</h1>
+        </div>
+        <div id="StudentNumberE">
+            <div id="studentNumber"></div>
+        </div>
+    </div>
+
+
+    <div class="login-form">
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" id="dob">
+            </div>
+
+            <div class="form-group">
+                <label for="nationality">Nationality</label>
+                <select class="form-control" id="nationality">
+                    <option value="001">Afghanistan</option>
+                    <option value="002">Albania</option>
+                    <option value="003">Algeria</option>
+                    <!-- Continues for all countries -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department</label>
+                <select class="form-control" id="department">
+                    <option value="EN">Engineering</option>
+                    <option value="LW">Law</option>
+                    <option value="BS">Basic Sciences</option>
+                    <option value="SS">Social Sciences</option>
+                    <option value="ES">Economic Sciences</option>
+                    <option value="BA">Business Administration</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="level">Level of Study</label>
+                <select class="form-control" id="level">
+                    <option value="1">Onlisans</option>
+                    <option value="2">Lisans</option>
+                    <option value="3">Master</option>
+                    <option value="4">PhD</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="generateString()">Generate Student Number</button>
+        </form>
+
+
+    </div>
+
+    <script>
+	function generateString() {
+		// Get form values
+		var nationality = document.getElementById("nationality").value;
+		var level = document.getElementById("level").value;
+		// Get current year
+		var currentYear = new Date().getFullYear().toString().slice(-3);
+		// Generate 4-digit random number
+		
+		var department = document.getElementById("department").value;
+		// Generate 4-digit random number
+		
+		var randomNumber = Math.floor(Math.random() * 10000).toString().padStart(4, "0");
+
+		// Concatenate values to create string
+		var studentNumber = nationality + level + department + currentYear + "0000" + randomNumber;
+
+		// Display string in div
+		document.getElementById("studentNumber").innerHTML = studentNumber;
+	}
+    </script>
+</body>
+
+</html>
