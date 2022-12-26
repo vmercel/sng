@@ -127,9 +127,11 @@
             <button type="button" class="btn btn-primary" onclick="generateString()">Generate Student Number</button>
         </form>
 
-<br/>
-<br/>
-<br/>
+<div class="container-border">
+    <br />
+    <br />
+    <br />
+</div>
     </div>
 
         <!-- <footer>
@@ -177,7 +179,7 @@
 		
         let dob = document.getElementById('dob').value;
 
-		var department = document.getElementById("department").value;
+		//var department = document.getElementById("department").value;
 		// Generate 4-digit random number
 		
 		var randomNumber = Math.floor(Math.random() * 10000).toString().padStart(4, "0");
